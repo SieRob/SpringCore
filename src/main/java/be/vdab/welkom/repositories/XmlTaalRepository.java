@@ -1,10 +1,9 @@
-package be.vdab.welkom.repository;
+package be.vdab.welkom.repositories;
 
 import be.vdab.welkom.domain.Taal;
 import be.vdab.welkom.exeptions.RepositoryException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import javax.xml.stream.XMLInputFactory;

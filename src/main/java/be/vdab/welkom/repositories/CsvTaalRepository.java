@@ -1,4 +1,4 @@
-package be.vdab.welkom.repository;
+package be.vdab.welkom.repositories;
 
 import be.vdab.welkom.domain.Taal;
 import be.vdab.welkom.exeptions.RepositoryException;

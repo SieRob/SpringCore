@@ -1,8 +1,8 @@
 package be.vdab.welkom.console;
 
 import be.vdab.welkom.exeptions.RepositoryException;
-import be.vdab.welkom.repository.LandRepository;
-import be.vdab.welkom.repository.TaalRepository;
+import be.vdab.welkom.repositories.LandRepository;
+import be.vdab.welkom.repositories.TaalRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

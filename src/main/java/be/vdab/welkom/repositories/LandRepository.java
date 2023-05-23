@@ -1,11 +1,10 @@
-package be.vdab.welkom.repository;
+package be.vdab.welkom.repositories;
 
 import be.vdab.welkom.domain.Land;
 import be.vdab.welkom.exeptions.RepositoryException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.io.IOError;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
