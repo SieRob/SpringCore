@@ -3,6 +3,7 @@ package be.vdab.welkom.console;
 import be.vdab.welkom.exeptions.RepositoryException;
 import be.vdab.welkom.repository.LandRepository;
 import be.vdab.welkom.repository.TaalRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class MyRunner implements CommandLineRunner {
     private final LandRepository landRepo;
     private final TaalRepository taalRepo;
-    public MyRunner(LandRepository landRepo, TaalRepository taalRepo){
+    public MyRunner(LandRepository landRepo, @Qualifier("XML") TaalRepository taalRepo){
         this.landRepo = landRepo;
         this.taalRepo = taalRepo;
     }
