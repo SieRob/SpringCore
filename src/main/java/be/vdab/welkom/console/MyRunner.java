@@ -2,14 +2,17 @@ package be.vdab.welkom.console;
 
 import be.vdab.welkom.exeptions.RepositoryException;
 import be.vdab.welkom.repository.LandRepository;
+import be.vdab.welkom.repository.TaalRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MyRunner implements CommandLineRunner {
     private final LandRepository landRepo;
-    public MyRunner(LandRepository landRepo){
+    private final TaalRepository taalRepo;
+    public MyRunner(LandRepository landRepo, TaalRepository taalRepo){
         this.landRepo = landRepo;
+        this.taalRepo = taalRepo;
     }
 
     @Override
@@ -17,6 +20,9 @@ public class MyRunner implements CommandLineRunner {
         try {
             landRepo.findAll()
                     .forEach(land -> System.out.println(land.getNaam()));
+            System.out.println();
+            taalRepo.findAll().
+                    forEach(taal -> System.out.println(taal.getNaam()));
         }catch (RepositoryException e){
             e.printStackTrace(System.err);
         }
